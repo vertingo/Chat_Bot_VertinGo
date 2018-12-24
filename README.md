@@ -9,7 +9,7 @@
 
 # Déployer le Chat Bot sur Azure
 
-Créer un compte sur Azure Ã  l'adresse suivante: https://azure.microsoft.com/fr-fr/free/search/?WT.srch=1&wt.mc_id=AID719808_SEM_V5APtzy9&dclid=CP_s1s6Pt98CFcsT0wodbjIFaA
+Créer un compte sur Azure à  l'adresse suivante: https://azure.microsoft.com/fr-fr/free/search/?WT.srch=1&wt.mc_id=AID719808_SEM_V5APtzy9&dclid=CP_s1s6Pt98CFcsT0wodbjIFaA
 
 Egalement le gestionnaire CLI: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
 
@@ -36,13 +36,13 @@ Ou Télécharger le projet depuis le portail Azure et ouvrer le avec Visual Studio
 </p> 
 
 
-Dans un premier temps il faut renseigner les variables botFilePath et botFileSecret dans appsettings.json en les récupérant depuis le portail Azure dans ParamÃ¨tres ensuite pour déployer il 
+Dans un premier temps il faut renseigner les variables botFilePath et botFileSecret dans appsettings.json en les récupérant depuis le portail Azure dans Paramètres ensuite pour déployer il 
 suffit simplement d'aller copier le mot de passe dans le fichier PublishSettings qui se trouve dans le dossier PostDeployScripts et ensuite clique droit sur le projet --> Publier
-Cliquer sur Publier et on vous demande de taper le mot de passe! Coller le mot passe copier précédement et votre chat-bot sera publié ou plutÃ´t mettra Ã  jour la version précédente sur Azure!
+Cliquer sur Publier et on vous demande de taper le mot de passe! Coller le mot passe copier précédement et votre chat-bot sera publié ou plutôt mettra à  jour la version précédente sur Azure!
 
 
 Vous pouvez également tester votre chat-bot en local avec Bot FrameWork Emulator. Pour cela installer l'émulateur depuis le lien suivant: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
-et dans Visual Studio Code exécuter le chat-bot pour qu'il puisse Ãªtre accessible depuis le localhost et ouvrer le fichier .bot!
+et dans Visual Studio Code exécuter le chat-bot pour qu'il puisse être accessible depuis le localhost et ouvrer le fichier .bot!
 
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot5.gif" width="800" height="450"/></a>
