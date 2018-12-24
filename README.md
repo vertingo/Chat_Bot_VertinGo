@@ -49,7 +49,7 @@ et dans Visual Studio Code exécuter le chat-bot pour qu'il puisse être accessibl
 </p> 
 
 
-# ğŸŒ Créer un bot avec le Bot Builder SDK en Javascript et .NET et déployer sur Azure(https://portal.azure.com)
+# Créer un bot avec le Bot Builder SDK en Javascript et .NET et déployer sur Azure(https://portal.azure.com)
 
 # Version en Node.JS
 npm install -g windows-build-tools
@@ -77,9 +77,9 @@ Aller dans Visual Studio Code et rechercher dans l'onglet en ligne Enterprise Te
 Créer ensuite un projet Enterprise Template Bot
 
 <p align="center">
-  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot3.gif" width="800" height="450"/></a>
-</p> 
-
+            <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
+            <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
+</p>
 
 
 ```
