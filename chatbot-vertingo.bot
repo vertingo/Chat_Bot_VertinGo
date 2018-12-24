@@ -1,0 +1,61 @@
+{
+  "name": "chatbot-vertingo",
+  "padlock": "c+ohkk6KxaVhm08Ky6aoIQ==!Q+4NpGFoI/IYp35NJln9fKFyC561w67Zs4mTcbQYEvI9twyRv8orcu2tXB4Nk/v4",
+  "version": "2.0",
+  "services": [
+    {
+      "tenantId": "38e72bba-3c22-4382-9323-ac1612931297",
+      "subscriptionId": "3860f5a5-212e-49be-b4d1-3b0ec63edb65",
+      "resourceGroup": "cloud-shell-storage-westeurope",
+      "serviceName": "chatbot-vertingo",
+      "type": "abs",
+      "name": "chatbot-vertingo",
+      "id": "1"
+    },
+    {
+      "connectionString": "YGyhwPBLSA2wgcKEEpJcqQ==!F6F6utvWk9cdaLwknZG4iDDFQ8x8SzDuS9/rmM0pzPq0Imfg3hviytxItnlHPRQNN7vXIBvdWUsxCgxi+nSQDD+qggi7b0DCaBwLkPfKW3tDqVDB5iV03RGRHbMH2tshZAfVyuJdwMTVwfujk7P6bieJste36RObSIeCurZ/UZP++4AYlySiw9rHQhvYadVSSQ3gpCSgHjTXnsmmqxbe1UBfLJFTHeNFKcOSSSSUqqw=",
+      "tenantId": "38e72bba-3c22-4382-9323-ac1612931297",
+      "subscriptionId": "3860f5a5-212e-49be-b4d1-3b0ec63edb65",
+      "resourceGroup": "cloud-shell-storage-westeurope",
+      "serviceName": "chatbotvertingo8ae0",
+      "type": "blob",
+      "id": "2"
+    },
+    {
+      "appId": "",
+      "appPassword": "",
+      "endpoint": "http://localhost:3978/api/messages",
+      "type": "endpoint",
+      "name": "development",
+      "id": "3"
+    },
+    {
+      "appId": "0239b4bd-3f2e-4985-b554-9e3db2566b04",
+      "appPassword": "xSOfd5/6uvF5FWBCxaQcyw==!fXVoVOCl2d0rJrwT4FO2xAOfvc9GbQag7/bFM0E6x6k=",
+      "endpoint": "https://chatbot-vertingo.azurewebsites.net/api/messages",
+      "type": "endpoint",
+      "name": "production",
+      "id": "4"
+    },
+    {
+      "instrumentationKey": "3M+O6puwodxfdSz5A5nUUA==!/ghWHhGllWtWjX7ZpagPg/ifGizQFYcTkdPws/cN7WdfAkfe3tzcvi2GqG5hYBwT",
+      "applicationId": "f6205c1d-7124-4b07-8599-5fd7b6f36e43",
+      "apiKeys": {},
+      "tenantId": "38e72bba-3c22-4382-9323-ac1612931297",
+      "subscriptionId": "3860f5a5-212e-49be-b4d1-3b0ec63edb65",
+      "resourceGroup": "cloud-shell-storage-westeurope",
+      "serviceName": "chatbot-vertingo4cddyp",
+      "type": "appInsights",
+      "id": "5"
+    },
+    {
+      "appId": "7d244419-e0c5-43a2-a96e-c201a8555155",
+      "authoringKey": "gGu4RUT+gNGsB7bYU6ZckQ==!S7bUlVkYBA1sAjXkofstC3I3ZTukoiJPsjXvAzq8fs0gMvtQ0eqxOTDKrK8PzBQm",
+      "version": "0.1",
+      "region": "westus",
+      "type": "luis",
+      "name": "BasicBotLuisApplication",
+      "id": "6"
+    }
+  ]
+}

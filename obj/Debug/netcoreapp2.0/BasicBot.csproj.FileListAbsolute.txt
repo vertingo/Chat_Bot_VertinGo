@@ -1,0 +1,12 @@
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\bin\Debug\netcoreapp2.0\chatbot-vertingo.bot
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\bin\Debug\netcoreapp2.0\BasicBot.deps.json
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\bin\Debug\netcoreapp2.0\BasicBot.runtimeconfig.json
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\bin\Debug\netcoreapp2.0\BasicBot.runtimeconfig.dev.json
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\bin\Debug\netcoreapp2.0\BasicBot.dll
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\bin\Debug\netcoreapp2.0\BasicBot.pdb
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\obj\Debug\netcoreapp2.0\BasicBot.csprojAssemblyReference.cache
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\obj\Debug\netcoreapp2.0\BasicBot.csproj.CoreCompileInputs.cache
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\obj\Debug\netcoreapp2.0\BasicBot.AssemblyInfoInputs.cache
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\obj\Debug\netcoreapp2.0\BasicBot.AssemblyInfo.cs
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\obj\Debug\netcoreapp2.0\BasicBot.dll
+C:\Users\tedal\source\repos\Chat-Bot-VertinGo\obj\Debug\netcoreapp2.0\BasicBot.pdb
