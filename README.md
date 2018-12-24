@@ -1,19 +1,19 @@
 
 ![Image](https://raw.githubusercontent.com/vertingo/Easy_Admin_YouTube_Newsletter_Firebase/master/web/assets/images/github/vertin_go_website.jpg)
-### üåê Apporter votre soutien au projet :heart: pour de futures √©volutions!
+### Apporter votre soutien au projet :heart: pour de futures Èvolutions!
 [![GitHub stars](https://img.shields.io/github/stars/vertingo/screenshott.svg?style=social&label=Star)](https://github.com/vertingo/Calcul_Graphique_Integral) [![GitHub forks](https://img.shields.io/github/forks/vertingo/screenshott.svg?style=social&label=Fork)](https://github.com/vertingo/Calcul_Graphique_Integral/fork) [![GitHub watchers](https://img.shields.io/github/watchers/vertingo/screenshott.svg?style=social&label=Watch)](https://github.com/vertingo/Calcul_Graphique_Integral) [![GitHub followers](https://img.shields.io/github/followers/vertingo.svg?style=social&label=Follow)](https://github.com/vertingo)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Vertin_Go.svg?style=social)](https://twitter.com/Vertin_Go)
 
 
-#Fran√ßais
+#FranÁais
 
-# D√©ployer le Chat Bot sur Azure
+# DÈployer le Chat Bot sur Azure
 
-Cr√©er un compte sur Azure √† l'adresse suivante: https://azure.microsoft.com/fr-fr/free/search/?WT.srch=1&wt.mc_id=AID719808_SEM_V5APtzy9&dclid=CP_s1s6Pt98CFcsT0wodbjIFaA
+CrÈer un compte sur Azure √† l'adresse suivante: https://azure.microsoft.com/fr-fr/free/search/?WT.srch=1&wt.mc_id=AID719808_SEM_V5APtzy9&dclid=CP_s1s6Pt98CFcsT0wodbjIFaA
 
 Egalement le gestionnaire CLI: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
 
-Ensuite cr√©er une ressource dans le portail azure en recherchant web app bot. Renseigner tous les diff√©rents champs n√©cessaires dont notamment le nom du chat bot, 
+Ensuite crÈer une ressource dans le portail azure en recherchant web app bot. Renseigner tous les diffÈrents champs nÈcessaires dont notamment le nom du chat bot, 
 le type de souscription, etc..
 
 <p align="center">
@@ -26,30 +26,30 @@ Enregistrer votre chat bot dans la Bot Channel Registration pour rÈcupÈrer les i
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot.gif" width="800" height="450"/></a>
 </p> 
 
-Ensuite t√©l√©charger le profil de d√©ploiement depuis azure et dans Visual Studio Code en faisant clique droit sur le projet -> publier et importer le fichier profil dans le menu 
+Ensuite tÈlÈcharger le profil de dÈploiement depuis azure et dans Visual Studio Code en faisant clique droit sur le projet -> publier et importer le fichier profil dans le menu 
 de publication!
 
-Ou T√©l√©charger le projet depuis le portail Azure et ouvrer le avec Visual Studio Code 2017
+Ou TÈlÈcharger le projet depuis le portail Azure et ouvrer le avec Visual Studio Code 2017
 
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/chat-bot.png" width="800" height="550"/></a>
 </p> 
 
 
-Dans un premier temps il faut renseigner les variables botFilePath et botFileSecret dans appsettings.json en les r√©cup√©rant depuis le portail Azure dans Param√®tres ensuite pour d√©ployer il 
+Dans un premier temps il faut renseigner les variables botFilePath et botFileSecret dans appsettings.json en les rÈcupÈrant depuis le portail Azure dans Param√®tres ensuite pour dÈployer il 
 suffit simplement d'aller copier le mot de passe dans le fichier PublishSettings qui se trouve dans le dossier PostDeployScripts et ensuite clique droit sur le projet --> Publier
-Cliquer sur Publier et on vous demande de taper le mot de passe! Coller le mot passe copier pr√©c√©dement et votre chat-bot sera publi√© ou plut√¥t mettra √† jour la version pr√©c√©dente sur Azure!
+Cliquer sur Publier et on vous demande de taper le mot de passe! Coller le mot passe copier prÈcÈdement et votre chat-bot sera publiÈ ou plut√¥t mettra √† jour la version prÈcÈdente sur Azure!
 
 
-Vous pouvez √©galement tester votre chat-bot en local avec Bot FrameWork Emulator. Pour cela installer l'√©mulateur depuis le lien suivant: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
-et dans Visual Studio Code ex√©cuter le chat-bot pour qu'il puisse √™tre accessible depuis le localhost et ouvrer le fichier .bot!
+Vous pouvez Ègalement tester votre chat-bot en local avec Bot FrameWork Emulator. Pour cela installer l'Èmulateur depuis le lien suivant: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
+et dans Visual Studio Code exÈcuter le chat-bot pour qu'il puisse √™tre accessible depuis le localhost et ouvrer le fichier .bot!
 
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot5.gif" width="800" height="450"/></a>
 </p> 
 
 
-# üåê Cr√©er un bot avec le Bot Builder SDK en Javascript et .NET et d√©ployer sur Azure(https://portal.azure.com)
+# üåê CrÈer un bot avec le Bot Builder SDK en Javascript et .NET et dÈployer sur Azure(https://portal.azure.com)
 
 # Version en Node.JS
 npm install -g windows-build-tools
@@ -62,9 +62,9 @@ yo botbuilder
 
 npm start
 
-Ensuite pour tester votre bot localement il faut installer Bot Emulator √† l'adresse suivante: 
+Ensuite pour tester votre bot localement il faut installer Bot Emulator ‡† l'adresse suivante: 
 
-Une fois install√© il suffit simplement d'ouvrir le fichier .bot avec l'application Bot Emulator: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
+Une fois installÈ il suffit simplement d'ouvrir le fichier .bot avec l'application Bot Emulator: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
 
 
 # Version en .NET
@@ -74,7 +74,7 @@ Installer II Express(Internet Information Express) (https://www.microsoft.com/fr
 
 Aller dans Visual Studio Code et rechercher dans l'onglet en ligne Enterprise Template Bot installer ce dernier!
 
-Cr√©er ensuite un projet Enterprise Template Bot
+CrÈer ensuite un projet Enterprise Template Bot
 
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot3.gif" width="800" height="450"/></a>
