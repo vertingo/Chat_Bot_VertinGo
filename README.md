@@ -81,13 +81,6 @@ Créer ensuite un projet Enterprise Template Bot
             <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
 </p>
 
-
-```
-Un petit coup de pouce suivez nous sur YouTube et Facebook!
-[You Tube] ==> https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1 
-[Facebook] ==> https://www.facebook.com/vertingo/ 
-```
-
 #English
 
 # Basic Bot template
