@@ -66,8 +66,8 @@ Ce qui nous intéresse ce sont les 3 premières lignes POST, Host, Authorization!
 Plus précisement <QnAKnowledgebaseId>, <QnAEndpointHostName>, <QnAAuthKey> 
 Gardez ces valeurs de côté et rendez-vous dans Azure pour créer une ressource de type Web App Bot!
 
-[Création de la ressource Web App Bot]
-Ensuite créer une ressource dans le portail azure en recherchant Web App Bot. 
+#### [Création de la ressource Web App Bot]
+Créer une ressource dans le portail azure en recherchant Web App Bot. 
 Renseigner tous les différents champs nécessaires dont notamment: 
 - Le nom du Chat Bot
 - Le type de souscription (par défaut celui que vous possédez)
