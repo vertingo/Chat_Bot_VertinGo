@@ -79,7 +79,7 @@ Renseigner tous les différents champs nécessaires dont notamment:
 - Le stockage azure créer un nouveau ou choissisez en un si vous en avez déjà un!
 - L'id d'application Microsoft (Automatique)
 
-Une illustration ci-dessous dans prendre en compte QnA!
+Une illustration ci-dessous sans prendre en compte QnA!
 <p align="center">
             <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
             <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
