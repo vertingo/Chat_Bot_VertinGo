@@ -62,7 +62,10 @@ Content-Type: application/json
 ```
 
 Ce qui nous intéresse ce sont les 3 premières lignes POST, Host, Authorization!
-Plus précisement <QnAKnowledgebaseId>, <QnAEndpointHostName>, <QnAAuthKey> 
+Plus précisement:
+```
+<QnAKnowledgebaseId>, <QnAEndpointHostName>, <QnAAuthKey> 
+```
 Gardez ces valeurs de côté et rendez-vous dans Azure pour créer une ressource de type Web App Bot!
 
 #### [Création de la ressource Web App Bot]
@@ -76,14 +79,20 @@ Renseigner tous les différents champs nécessaires dont notamment:
 - Le stockage azure créer un nouveau ou choissisez en un si vous en avez déjà un!
 - L'id d'application Microsoft (Automatique)
 
-[Etape spécifique pour Web App Bot de type QnA]
+Une illustration ci-dessous dans prendre en compte QnA!
+<p align="center">
+            <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
+            <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
+</p>
+
+#### [Etape spécifique pour Web App Bot de type QnA]
 Une fois l'application Web App Bot créé rendez-vous dans Paramètres d'application et dans Paramètres de l'application renseigner les valeurs suivantes
 récupérer depuis l'étape de publication de notre base de connaissance:
 - QnAAuthKey
 - QnAEndpointHostName
 - QnAKnowledgebaseId
 
-[Etape spécifique pour Web App Bot de type Basic Bot Luis]
+#### [Etape spécifique pour Web App Bot de type Basic Bot Luis]
 - Aller sur le portail LUIS à l'adresse suivante: https://www.luis.ai 
 - Connectez-vous avec vos identifiants Azure et aller dans l'onglet My Apps!
 - Cliquer sur l'application créer précèdement et tout en bas à gauche Prebuilt Domains!
@@ -150,10 +159,7 @@ Le bot devrait vous retourner les valeurs suivantes:
     ]
 }
 ```
-<p align="center">
-            <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
-            <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
-</p>
+
 
 
 
