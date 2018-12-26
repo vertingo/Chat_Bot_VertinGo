@@ -5,14 +5,13 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/Vertin_Go.svg?style=social)](https://twitter.com/Vertin_Go)
 
 
-#Français
+# Français
 
 # Déployer le Chat Bot sur Azure
 
-Créer un compte sur Azure à  l'adresse suivante: https://azure.microsoft.com/fr-fr/free/search/?WT.srch=1&wt.mc_id=AID719808_SEM_V5APtzy9&dclid=CP_s1s6Pt98CFcsT0wodbjIFaA
+Créer un compte sur Azure à  l'adresse suivante: (https://azure.microsoft.com/fr-fr/free/search/?WT.srch=1&wt.mc_id=AID719808_SEM_V5APtzy9&dclid=CP_s1s6Pt98CFcsT0wodbjIFaA)
 
-Egalement le gestionnaire CLI: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
-
+Egalement le gestionnaire CLI: (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 
 Petite précision avant de créer l'application App Bot si vous souhaitez pour intégrer les services QnA sinon vous pouvez passer à la section suivante!
 
@@ -20,39 +19,33 @@ Aller sur https://www.qnamaker.ai/ (Connecter-vous avec vos identifiants Azure e
 
 étapes à commencer par créer une ressource de type QnA Maker!
 
-[Etape 1]
+#### [Etape 1]
 Pour la ressource QnA Maker indiquer les valeurs suivantes:
-
--Le nom du Service
-
--L'abonnement Free Trial par défaut
-
--L'emplacement sélectionner Ouest des États-Unis(Précisez avant le type de tarification sinon impossible de sélectionner une valeur pour la tarification)
-
--Le type de tarification (F0 gratuit)
-
--Resource groupe (Laisser par défaut)
-
--Recherche prix tiers(F (3 indexes))
+- Le nom du Service
+- L'abonnement Free Trial par défaut
+- L'emplacement sélectionner Ouest des États-Unis(Précisez avant le type de tarification sinon impossible de sélectionner une valeur pour la tarification)
+- Le type de tarification (F0 gratuit)
+- Resource groupe (Laisser par défaut)
+- Recherche prix tiers(F (3 indexes))
 
 Le reste peut rester par défaut et vous pouvez créer la ressource QnA Maker!
 
-[Etape 2]
+#### [Etape 2]
 Une fois que vous avez créer la ressource QnA Maker renseigner les 3 valeurs suivantes:
--Microsoft Azure Directory ID(Sélectionner dans la liste!)
--Azure subscription name(Sélectionner dans la liste!)
--Azure QnA service(Sélectionner dans la liste!)
+- Microsoft Azure Directory ID(Sélectionner dans la liste!)
+- Azure subscription name(Sélectionner dans la liste!)
+- Azure QnA service(Sélectionner dans la liste!)
 
-[Etape 3]
+#### [Etape 3]
 Donner un nom à votre base de connaissance!
 
-[Etape 4]
+#### [Etape 4]
 Ajouter des valeurs à votre base de connaissance en ajoutant par exemple un url redirigeant vers un Faq(Frenquency ask question) d'un site!
 Exemple: https://docs.microsoft.com/fr-fr/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq
 
 Sinon ajouter un fichier de Questions Réponses!
 
-[Etape 5]
+#### [Etape 5]
 Cliquer sur Create your KB
 
 Une fois créé cliquer sur: 
@@ -76,20 +69,20 @@ Gardez ces valeurs de côté et rendez-vous dans Azure pour créer une ressource de
 [Création de la ressource Web App Bot]
 Ensuite créer une ressource dans le portail azure en recherchant Web App Bot. 
 Renseigner tous les différents champs nécessaires dont notamment: 
--Le nom du Chat Bot
--Le type de souscription (par défaut celui que vous possédez)
--Le niveau tarifaire FO pour gratuit
--Le modèle de bot (Choissisez le modèle Question and Answer en allant sur le kit de développement V3 pour un robot de type Qna sinon choissisez Basic Bot pour intégrer les services Luis)
--Le plan app service (Choissisez le plan QnA créer précèdement pour un robot de type Qna sinon celui par défaut App)
--Le stockage azure créer un nouveau ou choissisez en un si vous en avez déjà un!
--L'id d'application Microsoft (Automatique)
+- Le nom du Chat Bot
+- Le type de souscription (par défaut celui que vous possédez)
+- Le niveau tarifaire FO pour gratuit
+- Le modèle de bot (Choissisez le modèle Question and Answer en allant sur le kit de développement V3 pour un robot de type Qna sinon choissisez Basic Bot pour intégrer les services Luis)
+- Le plan app service (Choissisez le plan QnA créer précèdement pour un robot de type Qna sinon celui par défaut App)
+- Le stockage azure créer un nouveau ou choissisez en un si vous en avez déjà un!
+- L'id d'application Microsoft (Automatique)
 
 [Etape spécifique pour Web App Bot de type QnA]
 Une fois l'application Web App Bot créé rendez-vous dans Paramètres d'application et dans Paramètres de l'application renseigner les valeurs suivantes
 récupérer depuis l'étape de publication de notre base de connaissance:
--QnAAuthKey
--QnAEndpointHostName
--QnAKnowledgebaseId
+- QnAAuthKey
+- QnAEndpointHostName
+- QnAKnowledgebaseId
 
 [Etape spécifique pour Web App Bot de type Basic Bot Luis]
 - Aller sur le portail LUIS à l'adresse suivante: https://www.luis.ai 
@@ -232,7 +225,7 @@ Créer ensuite un projet Enterprise Template Bot
             <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
 </p>
 
-#English
+# English
 
 # Basic Bot template
 This bot has been created using [Microsoft Bot Framework](https://dev.botframework.com),
