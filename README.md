@@ -16,7 +16,6 @@ Egalement le gestionnaire CLI: (https://docs.microsoft.com/en-us/cli/azure/insta
 Petite précision avant de créer l'application App Bot si vous souhaitez pour intégrer les services QnA sinon vous pouvez passer à la section suivante!
 
 Aller sur https://www.qnamaker.ai/ (Connecter-vous avec vos identifiants Azure et cliquer sur créer une base de connaissance!) et suiver les différentes 
-
 étapes à commencer par créer une ressource de type QnA Maker!
 
 #### [Etape 1]
