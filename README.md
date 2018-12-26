@@ -13,8 +13,146 @@ Créer un compte sur Azure à  l'adresse suivante: https://azure.microsoft.com/fr-
 
 Egalement le gestionnaire CLI: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
 
-Ensuite créer une ressource dans le portail azure en recherchant web app bot. Renseigner tous les différents champs nécessaires dont notamment le nom du chat bot, 
-le type de souscription, etc..
+
+Petite précision avant de créer l'application App Bot si vous souhaitez pour intégrer les services QnA sinon vous pouvez passer à la section suivante!
+Aller sur https://www.qnamaker.ai/ (Connecter vous avec vos identifiants Azure et cliquer sur créer une base de connaissance!) et suiver les différentes 
+étapes à commencer par créer une ressource de type QnA Maker!
+
+[Etape 1]
+Pour la ressource QnA Maker indiquer les valeurs suivantes:
+-Le nom du Service
+-L'abonnement Free Trial par défaut
+-L'emplacement sélectionner Ouest des États-Unis(Précisez avant le type de tarification sinon impossible de sélectionner une valeur pour la tarification )
+-Le type de tarification (F0 gratuit)
+-Resource groupe (Laisser par défaut)
+-Recherche prix tiers(F (3 indexes))
+Le reste peut rester par défaut et vous pouvez créer la ressource QnA Maker!
+
+[Etape 2]
+Une fois que vous avez créer la ressource QnA Maker renseigner les 3 valeurs suivantes:
+-Microsoft Azure Directory ID(Sélectionner dans la liste!)
+-Azure subscription name(Sélectionner dans la liste!)
+-Azure QnA service(Sélectionner dans la liste!)
+
+[Etape 3]
+Donner un nom à votre base de connaissance!
+
+[Etape 4]
+Ajouter des valeurs à votre base de connaissance en ajoutant par exemple un url redirigeant vers un Faq(Frenquency ask question) d'un site!
+Exemple: https://docs.microsoft.com/fr-fr/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq
+
+Sinon ajouter un fichier de Questions Réponses!
+
+[Etape 5]
+Cliquer sur Create your KB
+
+Une fois créé clique sur: 
++ Add QnA pair (Ajouter en question: Hi et en réponse: Hello. Ask me bitlocker questions)
+Ensuite cliquer sur Save And Train! Vous pouvez tester votre bot en tapant hi dans test!
+Refermer l'onglet test en cliquant sur test puis publier votre base de connaissance!
+
+Vous obtenez les informations suivantes:
+```
+POST /knowledgebases/<QnAKnowledgebaseId>/generateAnswer
+Host:  <QnAEndpointHostName>
+Authorization: EndpointKey <QnAAuthKey> 
+Content-Type: application/json
+{"question":"<Your question>"}
+```
+
+Ce qui nous intéresse ce sont les 3 premières lignes POST, Host, Authorization!
+Plus précisement <QnAKnowledgebaseId>, <QnAEndpointHostName>, <QnAAuthKey> 
+Gardez ces valeurs de côté et rendez-vous dans Azure pour créer une ressource de type Web App Bot!
+
+[Création de la ressource Web App Bot]
+Ensuite créer une ressource dans le portail azure en recherchant Web App Bot. 
+Renseigner tous les différents champs nécessaires dont notamment: 
+-Le nom du Chat Bot
+-Le type de souscription (par défaut celui que vous possédez)
+-Le niveau tarifaire FO pour gratuit
+-Le modèle de bot (Choissisez le modèle Question and Answer en allant sur le kit de développement V3 pour un robot de type Qna sinon choissisez Basic Bot pour intégrer les services Luis)
+-Le plan app service (Choissisez le plan QnA créer précèdement pour un robot de type Qna sinon celui par défaut App)
+-Le stockage azure créer un nouveau ou choissisez en un si vous en avez déjà un!
+-L'id d'application Microsoft (Automatique)
+
+[Etape spécifique pour Web App Bot de type QnA]
+Une fois l'application Web App Bot créé rendez-vous dans Paramètres d'application et dans Paramètres de l'application renseigner les valeurs suivantes
+récupérer depuis l'étape de publication de notre base de connaissance:
+-QnAAuthKey
+-QnAEndpointHostName
+-QnAKnowledgebaseId
+
+[Etape spécifique pour Web App Bot de type Basic Bot Luis]
+-Aller sur le portail LUIS à l'adresse suivante: https://www.luis.ai 
+-Connectez-vous avec vos identifiants Azure et aller dans l'onglet My Apps!
+-Cliquer sur l'application créer précèdement et tout en bas à gauche Prebuilt Domains!
+-Sélectionner le domaine de votre choix(Pour rester cohérant avec la suite choissisez HomeAutomation) et puis train et pour finir publier!
+-Retourner dans Azure et sélectionner votre ressource Web App Bot aller dans le menu Build!
+-Cliquer sur télécharger un fichier zip(Attendez un peu le temps que votre fichier soit prêt à télécharger!)
+-Si vous n'avez pas Visual Studio 2017 télécharger le afin de pouvoir ouvrir le projet de votre Web App Bot
+-Ensuite créer un nouveau dossier avec le nom de votre bot à l'emplacement suivant C:\Users\<users>\source\repos 
+-Placer le contenu de votre fichier zip dans ce dernier dossier et faites clique droit extraire ici!
+-Ensuite ouvrer Visual Studio 2017 et aller dans votre dossier créé et sélectionner le fichier à l'extension .sln
+-Dans le appsettings.json renseigner les valeurs suivantes: botFilePath, botFileSecret que vous pouvez récupérer 
+dans Paramètres d'application sur le portail Azure de votre Web App Bot!
+- Ouvrer le fichier BasicBot.cs et dans [Supported LUIS Intents] rajouter les deux lignes suivantes:
+
+```
+public const string TurnOnIntent = "HomeAutomation_TurnOn"; // new intent
+public const string TurnOffIntent = "HomeAutomation_TurnOff"; // new intent
+```
+
+Et ensuite dans la méthode OnTurnAsync au niveau du deuxième switch imbriqué rajouter les valeurs suivantes:
+
+```
+case TurnOnIntent:
+    await turnContext.SendActivityAsync("TurnOn intent found, JSON response: " + luisResults?.Entities.ToString());
+    break;
+case TurnOffIntent:
+    await turnContext.SendActivityAsync("TurnOff intent found, JSON response: " + luisResults?.Entities.ToString());
+    break;
+```
+
+Ensuite éxecuter le bot en local et dans l'émulateur de bot ouvrer le fichier .bot et si demandé entrer la valeur du botFileSecret
+Pour le bot entrer la valeur suivante:
+
+Turn on the livingroom lights to 50%
+
+Le bot devrait vous retourner les valeurs suivantes:
+```
+{
+    "$instance": {
+        "HomeAutomation_Device": [
+            {
+                "startIndex": 23,
+                "endIndex": 29,
+                "score": 0.9776345,
+                "text": "lights",
+                "type": "HomeAutomation.Device"
+            }
+        ],
+        "HomeAutomation_Room": [
+            {
+                "startIndex": 12,
+                "endIndex": 22,
+                "score": 0.9079433,
+                "text": "livingroom",
+                "type": "HomeAutomation.Room"
+            }
+        ]
+    },
+    "HomeAutomation_Device": [
+        "lights"
+    ],
+    "HomeAutomation_Room": [
+        "livingroom"
+    ]
+}
+```
+<p align="center">
+            <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
+            <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
+</p>
 
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot2.gif" width="800" height="450"/></a>
@@ -52,6 +190,8 @@ et dans Visual Studio Code exécuter le chat-bot pour qu'il puisse être accessibl
 # Créer un bot avec le Bot Builder SDK en Javascript et .NET et déployer sur Azure(https://portal.azure.com)
 
 # Version en Node.JS
+
+```
 npm install -g windows-build-tools
 
 npm install -g npm
@@ -65,16 +205,16 @@ npm start
 Ensuite pour tester votre bot localement il faut installer Bot Emulator à  l'adresse suivante: 
 
 Une fois installé il suffit simplement d'ouvrir le fichier .bot avec l'application Bot Emulator: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
-
+```
 
 # Version en .NET
 
-
 Installer II Express(Internet Information Express) (https://www.microsoft.com/fr-fr/download/details.aspx?id=48264)
 
-Aller dans Visual Studio Code et rechercher dans l'onglet en ligne Enterprise Template Bot installer ce dernier!
+Aller dans Visual Studio Code et rechercher dans l'onglet en ligne Enterprise Template Bot, installer ce dernier!
 
 Créer ensuite un projet Enterprise Template Bot
+
 
 <p align="center">
             <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>

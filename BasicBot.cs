@@ -25,6 +25,8 @@ namespace Microsoft.BotBuilderSamples
         public const string CancelIntent = "Cancel";
         public const string HelpIntent = "Help";
         public const string NoneIntent = "None";
+        public const string TurnOnIntent = "HomeAutomation_TurnOn"; // new intent
+        public const string TurnOffIntent = "HomeAutomation_TurnOff"; // new intent
 
         /// <summary>
         /// Key in the bot config (.bot file) for the LUIS instance.
@@ -118,6 +120,13 @@ namespace Microsoft.BotBuilderSamples
                                     await dc.BeginDialogAsync(nameof(GreetingDialog));
                                     break;
 
+                                case TurnOnIntent:
+                                    await turnContext.SendActivityAsync("TurnOn intent found, JSON response: " + luisResults?.Entities.ToString());
+                                    break;
+                                case TurnOffIntent:
+                                    await turnContext.SendActivityAsync("TurnOff intent found, JSON response: " + luisResults?.Entities.ToString());
+                                    break;
+
                                 case NoneIntent:
                                 default:
                                     // Help or no intent identified, either way, let's provide some help.
@@ -135,6 +144,8 @@ namespace Microsoft.BotBuilderSamples
                         case DialogTurnStatus.Complete:
                             await dc.EndDialogAsync();
                             break;
+
+                        
 
                         default:
                             await dc.CancelAllDialogsAsync();
