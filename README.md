@@ -80,10 +80,11 @@ Renseigner tous les différents champs nécessaires dont notamment:
 - L'id d'application Microsoft (Automatique)
 
 Une illustration ci-dessous sans prendre en compte QnA!
+
 <p align="center">
-            <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
-            <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
-</p>
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot2.gif" width="800" height="450"/></a>
+</p> 
+
 
 #### [Etape spécifique pour Web App Bot de type QnA]
 Une fois l'application Web App Bot créé rendez-vous dans Paramètres d'application et dans Paramètres de l'application renseigner les valeurs suivantes
@@ -159,13 +160,13 @@ Le bot devrait vous retourner les valeurs suivantes:
     ]
 }
 ```
-
-
-
+Ci dessous vous trouverez des illustrations et détails supplémentaires!
 
 <p align="center">
-  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot2.gif" width="800" height="450"/></a>
-</p> 
+            <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
+            <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
+</p>
+
 
 Enregistrer votre chat bot dans la Bot Channel Registration pour récupérer les identifiants qu'il faudra remplacer dans Web.config dans le projet en .NET!
 
