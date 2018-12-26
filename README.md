@@ -55,7 +55,7 @@ Sinon ajouter un fichier de Questions Réponses!
 [Etape 5]
 Cliquer sur Create your KB
 
-Une fois créé clique sur: 
+Une fois créé cliquer sur: 
 + Add QnA pair (Ajouter en question: Hi et en réponse: Hello. Ask me bitlocker questions)
 Ensuite cliquer sur Save And Train! Vous pouvez tester votre bot en tapant hi dans test!
 Refermer l'onglet test en cliquant sur test puis publier votre base de connaissance!
@@ -92,17 +92,17 @@ récupérer depuis l'étape de publication de notre base de connaissance:
 -QnAKnowledgebaseId
 
 [Etape spécifique pour Web App Bot de type Basic Bot Luis]
--Aller sur le portail LUIS à l'adresse suivante: https://www.luis.ai 
--Connectez-vous avec vos identifiants Azure et aller dans l'onglet My Apps!
--Cliquer sur l'application créer précèdement et tout en bas à gauche Prebuilt Domains!
--Sélectionner le domaine de votre choix(Pour rester cohérant avec la suite choissisez HomeAutomation) et puis train et pour finir publier!
--Retourner dans Azure et sélectionner votre ressource Web App Bot aller dans le menu Build!
--Cliquer sur télécharger un fichier zip(Attendez un peu le temps que votre fichier soit prêt à télécharger!)
--Si vous n'avez pas Visual Studio 2017 télécharger le afin de pouvoir ouvrir le projet de votre Web App Bot
--Ensuite créer un nouveau dossier avec le nom de votre bot à l'emplacement suivant C:\Users\<users>\source\repos 
--Placer le contenu de votre fichier zip dans ce dernier dossier et faites clique droit extraire ici!
--Ensuite ouvrer Visual Studio 2017 et aller dans votre dossier créé et sélectionner le fichier à l'extension .sln
--Dans le appsettings.json renseigner les valeurs suivantes: botFilePath, botFileSecret que vous pouvez récupérer 
+- Aller sur le portail LUIS à l'adresse suivante: https://www.luis.ai 
+- Connectez-vous avec vos identifiants Azure et aller dans l'onglet My Apps!
+- Cliquer sur l'application créer précèdement et tout en bas à gauche Prebuilt Domains!
+- Sélectionner le domaine de votre choix(Pour rester cohérant avec la suite choissisez HomeAutomation) et puis train et pour finir publier!
+- Retourner dans Azure et sélectionner votre ressource Web App Bot aller dans le menu Build!
+- Cliquer sur télécharger un fichier zip(Attendez un peu le temps que votre fichier soit prêt à télécharger!)
+- Si vous n'avez pas Visual Studio 2017 télécharger le afin de pouvoir ouvrir le projet de votre Web App Bot
+- Ensuite créer un nouveau dossier avec le nom de votre bot à l'emplacement suivant C:\Users\<users>\source\repos 
+- Placer le contenu de votre fichier zip dans ce dernier dossier et faites clique droit extraire ici!
+- Ensuite ouvrer Visual Studio 2017 et aller dans votre dossier créé et sélectionner le fichier à l'extension .sln
+- Dans le appsettings.json renseigner les valeurs suivantes: botFilePath, botFileSecret que vous pouvez récupérer 
 dans Paramètres d'application sur le portail Azure de votre Web App Bot!
 - Ouvrer le fichier BasicBot.cs et dans [Supported LUIS Intents] rajouter les deux lignes suivantes:
 
