@@ -15,17 +15,26 @@ Egalement le gestionnaire CLI: https://docs.microsoft.com/en-us/cli/azure/instal
 
 
 Petite précision avant de créer l'application App Bot si vous souhaitez pour intégrer les services QnA sinon vous pouvez passer à la section suivante!
-Aller sur https://www.qnamaker.ai/ (Connecter vous avec vos identifiants Azure et cliquer sur créer une base de connaissance!) et suiver les différentes 
+
+Aller sur https://www.qnamaker.ai/ (Connecter-vous avec vos identifiants Azure et cliquer sur créer une base de connaissance!) et suiver les différentes 
+
 étapes à commencer par créer une ressource de type QnA Maker!
 
 [Etape 1]
 Pour la ressource QnA Maker indiquer les valeurs suivantes:
+
 -Le nom du Service
+
 -L'abonnement Free Trial par défaut
--L'emplacement sélectionner Ouest des États-Unis(Précisez avant le type de tarification sinon impossible de sélectionner une valeur pour la tarification )
+
+-L'emplacement sélectionner Ouest des États-Unis(Précisez avant le type de tarification sinon impossible de sélectionner une valeur pour la tarification)
+
 -Le type de tarification (F0 gratuit)
+
 -Resource groupe (Laisser par défaut)
+
 -Recherche prix tiers(F (3 indexes))
+
 Le reste peut rester par défaut et vous pouvez créer la ressource QnA Maker!
 
 [Etape 2]
@@ -153,6 +162,8 @@ Le bot devrait vous retourner les valeurs suivantes:
             <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
             <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
 </p>
+
+
 
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot2.gif" width="800" height="450"/></a>
