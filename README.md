@@ -203,7 +203,7 @@ Enregistrer votre Chat Bot dans la Bot Channel Registration pour récupérer les i
 
 Ensuite télécharger le profil de déploiement depuis azure et dans Visual Studio Code en faisant clique droit sur le projet -> publier et importer le fichier profil dans le menu de publication!
 
-Ou Télécharger le projet depuis le portail Azure et ouvrer le avec Visual Studio Code 2017(Etape recommendé et déjà expliqué plus haut!)
+Ou Télécharger le projet depuis le portail Azure et ouvrer le avec Visual Studio Code 2017(Etape recommandé et déjà expliqué plus haut!)
 
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/chat-bot.png" width="800" height="550"/></a>
