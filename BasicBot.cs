@@ -27,6 +27,9 @@ namespace Microsoft.BotBuilderSamples
         public const string NoneIntent = "None";
         public const string TurnOnIntent = "HomeAutomation_TurnOn"; // new intent
         public const string TurnOffIntent = "HomeAutomation_TurnOff"; // new intent
+        public const string TvChannel = "TV_ChannelName"; // new intent
+        public const string CalendarFind = "Calendar_Find";
+        public const string CalendarAdd = "Calendar_Add";
 
         /// <summary>
         /// Key in the bot config (.bot file) for the LUIS instance.
@@ -125,6 +128,18 @@ namespace Microsoft.BotBuilderSamples
                                     break;
                                 case TurnOffIntent:
                                     await turnContext.SendActivityAsync("TurnOff intent found, JSON response: " + luisResults?.Entities.ToString());
+                                    break;
+
+                                case TvChannel:
+                                    await turnContext.SendActivityAsync("TvChannel intent found, JSON response: " + luisResults?.Entities.ToString());
+                                    break;
+
+                                case CalendarFind:
+                                    await turnContext.SendActivityAsync("CalendarFind intent found, JSON response: " + luisResults?.Entities.ToString());
+                                    break;
+
+                                case CalendarAdd:
+                                    await turnContext.SendActivityAsync("CalendarAdd intent found, JSON response: " + luisResults?.Entities.ToString());
                                     break;
 
                                 case NoneIntent:

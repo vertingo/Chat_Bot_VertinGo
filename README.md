@@ -128,6 +128,7 @@ Pour le bot entrer la valeur suivante:
 Turn on the livingroom lights to 50%
 
 Le bot devrait vous retourner les valeurs suivantes:
+
 ```
 {
     "$instance": {
@@ -158,7 +159,23 @@ Le bot devrait vous retourner les valeurs suivantes:
     ]
 }
 ```
+
 Ci-dessous vous trouverez des illustrations et détails supplémentaires!
+
+#### Commande Ludown Chat-Bot + Build du robot depuis l'éditeur en ligne
+
+```
+npm i -g msbot luis-apis ludown (Installation du Gestionnaire Ludown, MSBOT, luis-apis CLI Tools)
+
+ludown parse toluis --in dialogs/greeting/resources/main.lu -o cognitiveModels/ --out basicBot.luis -n 'basic-bot-LUIS' -d 'Basic bot Bot Builder V4 sample.' --verbose (Génére le model basicBot.luis)
+
+luis import application --in cognitiveModels/basicBot.luis --appName BasicBot
+
+msbot list --secret [val_botFileSecret] (Récuperer botFileSecret dans appsettings.json ou si non renseigné dans appsettings.json aller sur le portail Azure, et dans le projet correspondant à votre 
+Chat-Bot et Paramètres d'App Service -> paramètres d'application!)
+
+luis train version --appId [val_app_id] --versionId [val_version] [--wait] (Récupérer [val_app_id] et [val_version] sur le portail LUIS(http://luis.ai/))
+```
 
 <p align="center">
             <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
@@ -194,7 +211,7 @@ Aller dans Visual Studio Code et rechercher dans l'onglet en ligne Enterprise Te
 
 Créer ensuite un projet Enterprise Template Bot
 
-#### Bot Channel Registration
+#### Bot Channel Enregistrement
 Enregistrer votre Chat Bot dans la Bot Channel Registration pour récupérer les identifiants qu'il faudra remplacer dans Web.config dans le projet en .NET!
 
 <p align="center">
