@@ -1,52 +1,52 @@
 
 ![Image](https://raw.githubusercontent.com/vertingo/Easy_Admin_YouTube_Newsletter_Firebase/master/web/assets/images/github/vertin_go_website.jpg)
-### Apporter votre soutien au projet :heart: pour de futures évolutions!
+### Apporter votre soutien au projet :heart: pour de futures Ã©volutions!
 [![GitHub stars](https://img.shields.io/github/stars/vertingo/screenshott.svg?style=social&label=Star)](https://github.com/vertingo/Chat_Bot_VertinGo) [![GitHub forks](https://img.shields.io/github/forks/vertingo/screenshott.svg?style=social&label=Fork)](https://github.com/vertingo/Chat_Bot_VertinGo/fork) [![GitHub watchers](https://img.shields.io/github/watchers/vertingo/screenshott.svg?style=social&label=Watch)](https://github.com/vertingo/Chat_Bot_VertinGo) [![GitHub followers](https://img.shields.io/github/followers/vertingo.svg?style=social&label=Follow)](https://github.com/vertingo)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Vertin_Go.svg?style=social)](https://twitter.com/Vertin_Go)
 
 
-## Créer le Chat Bot sur Azure + Téléchargement du projet pour l'éditer depuis Visual Studio Code en local + Ajout des Services QnA et Luis(Version Française)
+## CrÃ©er le Chat Bot sur Azure + TÃ©lÃ©chargement du projet pour l'Ã©diter depuis Visual Studio Code en local + Ajout des Services QnA et Luis(Version FranÃ§aise)
 
-Créer un compte sur Azure à l'adresse suivante: (https://azure.microsoft.com/fr-fr/free/search/?WT.srch=1&wt.mc_id=AID719808_SEM_V5APtzy9&dclid=CP_s1s6Pt98CFcsT0wodbjIFaA)
+CrÃ©er un compte sur Azure Ã Â l'adresse suivante: (https://azure.microsoft.com/fr-fr/free/search/?WT.srch=1&wt.mc_id=AID719808_SEM_V5APtzy9&dclid=CP_s1s6Pt98CFcsT0wodbjIFaA)
 
 Egalement le gestionnaire CLI: (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 
-Petite précision avant de créer l'application App Bot si vous souhaitez pour intégrer les services QnA sinon vous pouvez passer à la section suivante!
+Petite prÃ©cision avant de crÃ©er l'application App Bot si vous souhaitez pour intÃ©grer les services QnA sinon vous pouvez passer Ã  la section suivante!
 
-Aller sur https://www.qnamaker.ai/ (Connecter-vous avec vos identifiants Azure et cliquer sur créer une base de connaissance!) et suiver les différentes 
-étapes à commencer par créer une ressource de type QnA Maker!
+Aller sur https://www.qnamaker.ai/ (Connecter-vous avec vos identifiants Azure et cliquer sur crÃ©er une base de connaissance!) et suiver les diffÃ©rentes 
+Ã©tapes Ã  commencer par crÃ©er une ressource de type QnA Maker!
 
 #### [Etape 1]
 Pour la ressource QnA Maker indiquer les valeurs suivantes:
 - Le nom du Service
-- L'abonnement Free Trial par défaut
-- L'emplacement sélectionner Ouest des États-Unis(Précisez avant le type de tarification sinon impossible de sélectionner une valeur pour la tarification)
+- L'abonnement Free Trial par dÃ©faut
+- L'emplacement sÃ©lectionner Ouest des Ã‰tats-Unis(PrÃ©cisez avant le type de tarification sinon impossible de sÃ©lectionner une valeur pour la tarification)
 - Le type de tarification (F0 gratuit)
-- Resource groupe (Laisser par défaut)
+- Resource groupe (Laisser par dÃ©faut)
 - Recherche prix tiers(F (3 indexes))
 
-Le reste peut rester par défaut et vous pouvez créer la ressource QnA Maker!
+Le reste peut rester par dÃ©faut et vous pouvez crÃ©er la ressource QnA Maker!
 
 #### [Etape 2]
-Une fois que vous avez créer la ressource QnA Maker renseigner les 3 valeurs suivantes:
-- Microsoft Azure Directory ID(Sélectionner dans la liste!)
-- Azure subscription name(Sélectionner dans la liste!)
-- Azure QnA service(Sélectionner dans la liste!)
+Une fois que vous avez crÃ©er la ressource QnA Maker renseigner les 3 valeurs suivantes:
+- Microsoft Azure Directory ID(SÃ©lectionner dans la liste!)
+- Azure subscription name(SÃ©lectionner dans la liste!)
+- Azure QnA service(SÃ©lectionner dans la liste!)
 
 #### [Etape 3]
-Donner un nom à votre base de connaissance!
+Donner un nom Ã  votre base de connaissance!
 
 #### [Etape 4]
-Ajouter des valeurs à votre base de connaissance en ajoutant par exemple un url redirigeant vers un Faq(Frenquency ask question) d'un site!
+Ajouter des valeurs Ã  votre base de connaissance en ajoutant par exemple un url redirigeant vers un Faq(Frenquency ask question) d'un site!
 Exemple: https://docs.microsoft.com/fr-fr/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq
 
-Sinon ajouter un fichier de Questions Réponses!
+Sinon ajouter un fichier de Questions RÃ©ponses!
 
 #### [Etape 5]
 Cliquer sur Create your KB
 
-Une fois créé cliquer sur: 
-+ Add QnA pair (Ajouter en question: Hi et en réponse: Hello. Ask me bitlocker questions)
+Une fois crÃ©Ã© cliquer sur: 
++ Add QnA pair (Ajouter en question: Hi et en rÃ©ponse: Hello. Ask me bitlocker questions)
 Ensuite cliquer sur Save And Train! Vous pouvez tester votre bot en tapant hi dans test!
 Refermer l'onglet test en cliquant sur test puis publier votre base de connaissance!
 
@@ -59,22 +59,22 @@ Content-Type: application/json
 {"question":"<Your question>"}
 ```
 
-Ce qui nous intéresse ce sont les 3 premières lignes POST, Host, Authorization!
-Plus précisement:
+Ce qui nous intÃ©resse ce sont les 3 premiÃ¨res lignes POST, Host, Authorization!
+Plus prÃ©cisement:
 ```
 <QnAKnowledgebaseId>, <QnAEndpointHostName>, <QnAAuthKey> 
 ```
-Gardez ces valeurs de côté et rendez-vous dans Azure pour créer une ressource de type Web App Bot!
+Gardez ces valeurs de cÃ´tÃ© et rendez-vous dans Azure pour crÃ©er une ressource de type Web App Bot!
 
-#### [Création de la ressource Web App Bot]
-Créer une ressource dans le portail azure en recherchant Web App Bot. 
-Renseigner tous les différents champs nécessaires dont notamment: 
+#### [CrÃ©ation de la ressource Web App Bot]
+CrÃ©er une ressource dans le portail azure en recherchant Web App Bot. 
+Renseigner tous les diffÃ©rents champs nÃ©cessaires dont notamment: 
 - Le nom du Chat Bot
-- Le type de souscription (par défaut celui que vous possédez)
+- Le type de souscription (par dÃ©faut celui que vous possÃ©dez)
 - Le niveau tarifaire FO pour gratuit
-- Le modèle de bot (Choissisez le modèle Question and Answer en allant sur le kit de développement V3 pour un robot de type Qna sinon choissisez Basic Bot pour intégrer les services Luis)
-- Le plan app service (Choissisez le plan QnA créer précèdement pour un robot de type Qna sinon celui par défaut App)
-- Le stockage azure créer un nouveau ou choissisez en un si vous en avez déjà un!
+- Le modÃ¨le de bot (Choissisez le modÃ¨le Question and Answer en allant sur le kit de dÃ©veloppement V3 pour un robot de type Qna sinon choissisez Basic Bot pour intÃ©grer les services Luis)
+- Le plan app service (Choissisez le plan QnA crÃ©er prÃ©cÃ¨dement pour un robot de type Qna sinon celui par dÃ©faut App)
+- Le stockage azure crÃ©er un nouveau ou choissisez en un si vous en avez dÃ©jÃ  un!
 - L'id d'application Microsoft (Automatique)
 
 Une illustration ci-dessous sans prendre en compte QnA!
@@ -84,26 +84,26 @@ Une illustration ci-dessous sans prendre en compte QnA!
 </p> 
 
 
-#### [Etape spécifique pour Web App Bot de type QnA]
-Une fois l'application Web App Bot créé rendez-vous dans Paramètres d'application et dans Paramètres de l'application renseigner les valeurs suivantes
-récupérer depuis l'étape de publication de notre base de connaissance:
+#### [Etape spÃ©cifique pour Web App Bot de type QnA]
+Une fois l'application Web App Bot crÃ©Ã© rendez-vous dans ParamÃ¨tres d'application et dans ParamÃ¨tres de l'application renseigner les valeurs suivantes
+rÃ©cupÃ©rer depuis l'Ã©tape de publication de notre base de connaissance:
 - QnAAuthKey
 - QnAEndpointHostName
 - QnAKnowledgebaseId
 
-#### [Etape spécifique pour Web App Bot de type Basic Bot Luis]
-- Aller sur le portail LUIS à l'adresse suivante: https://www.luis.ai 
+#### [Etape spÃ©cifique pour Web App Bot de type Basic Bot Luis]
+- Aller sur le portail LUIS Ã  l'adresse suivante: https://www.luis.ai 
 - Connectez-vous avec vos identifiants Azure et aller dans l'onglet My Apps!
-- Cliquer sur l'application créer précèdement et tout en bas à gauche Prebuilt Domains!
-- Sélectionner le domaine de votre choix(Pour rester cohérant avec la suite choissisez HomeAutomation) et puis train et pour finir publier!
-- Retourner dans Azure et sélectionner votre ressource Web App Bot aller dans le menu Build!
-- Cliquer sur télécharger un fichier zip(Attendez un peu le temps que votre fichier soit prêt à télécharger!)
-- Si vous n'avez pas Visual Studio 2017 télécharger le afin de pouvoir ouvrir le projet de votre Web App Bot
-- Ensuite créer un nouveau dossier avec le nom de votre bot à l'emplacement suivant C:\Users\<users>\source\repos 
+- Cliquer sur l'application crÃ©er prÃ©cÃ¨dement et tout en bas Ã  gauche Prebuilt Domains!
+- SÃ©lectionner le domaine de votre choix(Pour rester cohÃ©rant avec la suite choissisez HomeAutomation) et puis train et pour finir publier!
+- Retourner dans Azure et sÃ©lectionner votre ressource Web App Bot aller dans le menu Build!
+- Cliquer sur tÃ©lÃ©charger un fichier zip(Attendez un peu le temps que votre fichier soit prÃªt Ã  tÃ©lÃ©charger!)
+- Si vous n'avez pas Visual Studio 2017 tÃ©lÃ©charger le afin de pouvoir ouvrir le projet de votre Web App Bot
+- Ensuite crÃ©er un nouveau dossier avec le nom de votre bot Ã  l'emplacement suivant C:\Users\<users>\source\repos 
 - Placer le contenu de votre fichier zip dans ce dernier dossier et faites clique droit extraire ici!
-- Ensuite ouvrer Visual Studio 2017 et aller dans votre dossier créé et sélectionner le fichier à l'extension .sln
-- Dans le appsettings.json renseigner les valeurs suivantes: botFilePath, botFileSecret que vous pouvez récupérer 
-dans Paramètres d'application sur le portail Azure de votre Web App Bot!
+- Ensuite ouvrer Visual Studio 2017 et aller dans votre dossier crÃ©Ã© et sÃ©lectionner le fichier Ã  l'extension .sln
+- Dans le appsettings.json renseigner les valeurs suivantes: botFilePath, botFileSecret que vous pouvez rÃ©cupÃ©rer 
+dans ParamÃ¨tres d'application sur le portail Azure de votre Web App Bot!
 - Ouvrer le fichier BasicBot.cs et dans [Supported LUIS Intents] rajouter les deux lignes suivantes:
 
 ```
@@ -111,7 +111,7 @@ public const string TurnOnIntent = "HomeAutomation_TurnOn"; // new intent
 public const string TurnOffIntent = "HomeAutomation_TurnOff"; // new intent
 ```
 
-Et ensuite dans la méthode OnTurnAsync au niveau du deuxième switch imbriqué rajouter les valeurs suivantes:
+Et ensuite dans la mÃ©thode OnTurnAsync au niveau du deuxiÃ¨me switch imbriquÃ© rajouter les valeurs suivantes:
 
 ```
 case TurnOnIntent:
@@ -122,7 +122,7 @@ case TurnOffIntent:
     break;
 ```
 
-Ensuite éxecuter le bot en local et dans l'émulateur de bot ouvrer le fichier .bot et si demandé entrer la valeur du botFileSecret
+Ensuite Ã©xecuter le bot en local et dans l'Ã©mulateur de bot ouvrer le fichier .bot et si demandÃ© entrer la valeur du botFileSecret
 Pour le bot entrer la valeur suivante:
 
 Turn on the livingroom lights to 50%
@@ -160,32 +160,32 @@ Le bot devrait vous retourner les valeurs suivantes:
 }
 ```
 
-Ci-dessous vous trouverez des illustrations et détails supplémentaires!
+Ci-dessous vous trouverez des illustrations et dÃ©tails supplÃ©mentaires!
 
-#### Commande Ludown Chat-Bot + Build du robot depuis l'éditeur en ligne
+#### Commande Ludown Chat-Bot + Build du robot depuis l'Ã©diteur en ligne
 
 ```
 npm i -g msbot luis-apis ludown (Installation du Gestionnaire Ludown, MSBOT, luis-apis CLI Tools)
 
-ludown parse toluis --in dialogs/greeting/resources/main.lu -o cognitiveModels/ --out basicBot.luis -n 'basic-bot-LUIS' -d 'Basic bot Bot Builder V4 sample.' --verbose (Génére le model basicBot.luis)
+ludown parse toluis --in dialogs/greeting/resources/main.lu -o cognitiveModels/ --out basicBot.luis -n 'basic-bot-LUIS' -d 'Basic bot Bot Builder V4 sample.' --verbose (GÃ©nÃ©re le model basicBot.luis)
 
 luis import application --in cognitiveModels/basicBot.luis --appName BasicBot
 
-msbot list --secret [val_botFileSecret] (Récuperer botFileSecret dans appsettings.json ou si non renseigné dans appsettings.json aller sur le portail Azure, et dans le projet correspondant à votre 
-Chat-Bot et Paramètres d'App Service -> paramètres d'application!)
+msbot list --secret [val_botFileSecret] (RÃ©cuperer botFileSecret dans appsettings.json ou si non renseignÃ© dans appsettings.json aller sur le portail Azure, et dans le projet correspondant Ã  votre 
+Chat-Bot et ParamÃ¨tres d'App Service -> paramÃ¨tres d'application!)
 
-luis train version --appId [val_app_id] --versionId [val_version] [--wait] (Récupérer [val_app_id] et [val_version] sur le portail LUIS(http://luis.ai/))
+luis train version --appId [val_app_id] --versionId [val_version] [--wait] (RÃ©cupÃ©rer [val_app_id] et [val_version] sur le portail LUIS(http://luis.ai/))
 ```
 
 <p align="center">
-            <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
-            <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
+            <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="150"/></a>
+            <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="150"/></a>
 </p>
 
 
-## Créer un Bot avec le Bot Builder SDK de Visual Studio Code 2017 en Javascript et .NET et déployer sur Azure(https://portal.azure.com)
+## CrÃ©er un Bot avec le Bot Builder SDK de Visual Studio Code 2017 en Javascript et .NET et dÃ©ployer sur Azure(https://portal.azure.com)
 
-#### Créer un Chat Bot depuis une invite de commande en version en Node.JS
+#### CrÃ©er un Chat Bot depuis une invite de commande en version en Node.JS
 
 ```
 npm install -g windows-build-tools
@@ -198,48 +198,48 @@ yo botbuilder
 
 npm start
 
-Ensuite pour tester votre bot localement il faut installer Bot Emulator à  l'adresse suivante: 
+Ensuite pour tester votre bot localement il faut installer Bot Emulator Ã Â  l'adresse suivante: 
 
-Une fois installé il suffit simplement d'ouvrir le fichier .bot avec l'application Bot Emulator: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
+Une fois installÃ© il suffit simplement d'ouvrir le fichier .bot avec l'application Bot Emulator: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
 ```
 
-#### Créer un Chat Bot depuis Visual Studio 2017 en version en .NET
+#### CrÃ©er un Chat Bot depuis Visual Studio 2017 en version en .NET
 
 Installer II Express(Internet Information Express) (https://www.microsoft.com/fr-fr/download/details.aspx?id=48264)
 
 Aller dans Visual Studio Code et rechercher dans l'onglet en ligne Enterprise Template Bot, installer ce dernier!
 
-Créer ensuite un projet Enterprise Template Bot
+CrÃ©er ensuite un projet Enterprise Template Bot
 
 #### Bot Channel Enregistrement
-Enregistrer votre Chat Bot dans la Bot Channel Registration pour récupérer les identifiants qu'il faudra remplacer dans Web.config dans le projet en .NET!
+Enregistrer votre Chat Bot dans la Bot Channel Registration pour rÃ©cupÃ©rer les identifiants qu'il faudra remplacer dans Web.config dans le projet en .NET!
 
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot.gif" width="800" height="450"/></a>
 </p> 
 
-Ensuite télécharger le profil de déploiement depuis azure et dans Visual Studio Code en faisant clique droit sur le projet -> publier et importer le fichier profil dans le menu de publication!
+Ensuite tÃ©lÃ©charger le profil de dÃ©ploiement depuis azure et dans Visual Studio Code en faisant clique droit sur le projet -> publier et importer le fichier profil dans le menu de publication!
 
-Ou Télécharger le projet depuis le portail Azure et ouvrer le avec Visual Studio Code 2017(Etape recommandé et déjà expliqué plus haut!)
+Ou TÃ©lÃ©charger le projet depuis le portail Azure et ouvrer le avec Visual Studio Code 2017(Etape recommandÃ© et dÃ©jÃ  expliquÃ© plus haut!)
 
 <p align="center">
-  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/chat-bot.png" width="800" height="550"/></a>
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/chat-bot.png" width="900" height="250"/></a>
 </p> 
 
-Dans un premier temps il faut renseigner les variables botFilePath et botFileSecret dans appsettings.json en les récupérant depuis le portail Azure dans Paramètres ensuite pour déployer il 
+Dans un premier temps il faut renseigner les variables botFilePath et botFileSecret dans appsettings.json en les rÃ©cupÃ©rant depuis le portail Azure dans ParamÃ¨tres ensuite pour dÃ©ployer il 
 suffit simplement d'aller copier le mot de passe dans le fichier PublishSettings qui se trouve dans le dossier PostDeployScripts et ensuite clique droit sur le projet --> Publier
-Cliquer sur Publier et on vous demande de taper le mot de passe! Coller le mot passe copier précédement et votre chat-bot sera publié ou plutôt mettra à  jour la version précédente sur Azure!
+Cliquer sur Publier et on vous demande de taper le mot de passe! Coller le mot passe copier prÃ©cÃ©dement et votre chat-bot sera publiÃ© ou plutÃ´t mettra Ã Â  jour la version prÃ©cÃ©dente sur Azure!
 
-Vous pouvez également tester votre chat-bot en local avec Bot FrameWork Emulator. Pour cela installer l'émulateur depuis le lien suivant: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
-et dans Visual Studio Code exécuter le chat-bot pour qu'il puisse être accessible depuis le localhost et ouvrer le fichier .bot!
+Vous pouvez Ã©galement tester votre chat-bot en local avec Bot FrameWork Emulator. Pour cela installer l'Ã©mulateur depuis le lien suivant: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
+et dans Visual Studio Code exÃ©cuter le chat-bot pour qu'il puisse Ãªtre accessible depuis le localhost et ouvrer le fichier .bot!
 
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot5.gif" width="800" height="450"/></a>
 </p> 
 
 <p align="center">
-            <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
-            <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
+            <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="150"/></a>
+            <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="150"/></a>
 </p>
 
 ## Create Basic Bot template with LUIS(English version)
