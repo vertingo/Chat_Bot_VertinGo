@@ -308,3 +308,7 @@ msbot clone services -f deploymentScripts/msbotClone -n <BOT-NAME> -l <Azure-loc
 - [Channels and Bot Connector Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-concepts?view=azure-bot-service-4.0)
 - [QnA Maker](https://qnamaker.ai)
 
+<p align="center">
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/easy-admin-youtube-newsletter-firebase/master/web/assets/images/reseaux-sociaux/youtube2.png" width="400" height="250"/></a>
+  <a href="https://www.facebook.com/vertingo/"><img src="https://raw.githubusercontent.com/vertingo/easy-admin-youtube-newsletter-firebase/master/web/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="250"/></a>
+</p>
