@@ -198,27 +198,28 @@ luis train version --appId [val_app_id] --versionId [val_version] [--wait] (Réc
 
 ```
 npm install -g windows-build-tools
-
+```
+```
 npm install -g npm
-
+```
+```
 npm install -g yo generator-botbuilder
-
+```
+```
 yo botbuilder
-
+```
+```
 npm start
+```
 
 Ensuite pour tester votre bot localement il faut installer Bot Emulator à  l'adresse suivante: 
-
 Une fois installé il suffit simplement d'ouvrir le fichier .bot avec l'application Bot Emulator: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
-```
 
 #### Créer un Chat Bot depuis Visual Studio 2017 en version en .NET
 
 Installer II Express(Internet Information Express) (https://www.microsoft.com/fr-fr/download/details.aspx?id=48264)
-
 Aller dans Visual Studio Code et rechercher dans l'onglet en ligne Enterprise Template Bot, installer ce dernier!
-
-Créer ensuite un projet Enterprise Template Bot
+Créer ensuite un projet Enterprise Template Bot.
 
 #### Bot Channel Enregistrement
 Enregistrer votre Chat Bot dans la Bot Channel Registration pour récupérer les identifiants qu'il faudra remplacer dans Web.config dans le projet en .NET!
@@ -228,7 +229,6 @@ Enregistrer votre Chat Bot dans la Bot Channel Registration pour récupérer les
 </p> 
 
 Ensuite télécharger le profil de déploiement depuis azure et dans Visual Studio Code en faisant clique droit sur le projet -> publier et importer le fichier profil dans le menu de publication!
-
 Ou Télécharger le projet depuis le portail Azure et ouvrer le avec Visual Studio Code 2017(Etape recommandé et déjà expliqué plus haut!)
 
 <p align="center">
@@ -238,8 +238,7 @@ Ou Télécharger le projet depuis le portail Azure et ouvrer le avec Visual Stud
 Dans un premier temps il faut renseigner les variables botFilePath et botFileSecret dans appsettings.json en les récupérant depuis le portail Azure dans Paramètres ensuite pour déployer il 
 suffit simplement d'aller copier le mot de passe dans le fichier PublishSettings qui se trouve dans le dossier PostDeployScripts et ensuite clique droit sur le projet --> Publier
 Cliquer sur Publier et on vous demande de taper le mot de passe! Coller le mot passe copier précédement et votre chat-bot sera publié ou plutôt mettra à  jour la version précédente sur Azure!
-
-Vous pouvez également tester votre chat-bot en local avec Bot FrameWork Emulator. Pour cela installer l'émulateur depuis le lien suivant: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1
+Vous pouvez également tester votre chat-bot en local avec Bot FrameWork Emulator. Pour cela installer l'émulateur depuis le lien suivant: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1 
 et dans Visual Studio Code exécuter le chat-bot pour qu'il puisse être accessible depuis le localhost et ouvrer le fichier .bot!
 
 <p align="center">
