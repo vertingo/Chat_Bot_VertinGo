@@ -77,7 +77,7 @@ Sur le portail Azure, recherchez "Web App Bot" et créez une nouvelle ressource.
 Une fois le Bot déployé, vous pouvez le tester directement depuis Azure ou via des outils comme Bot Framework Emulator.
 
 <p align="center">
-<a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://github.com/vertingo/vertingo-website-chatbot-app/blob/master/Images/Azure-Bot2.gif" width="800" height="450"/></a>
+<a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/vertingo-website-chatbot-app/master/Images/Azure-Bot2.gif" width="800" height="450"/></a>
 </p>
 
 #### [Étape spécifique pour Web App Bot de type QnA]
@@ -223,7 +223,7 @@ Une fois installé il suffit simplement d'ouvrir le fichier .bot avec l'applicat
 #### Bot Channel Enregistrement
 Enregistrer votre Chat Bot dans la Bot Channel Registration pour récupérer les identifiants qu'il faudra remplacer dans Web.config dans le projet en .NET!
 <p align="center">
-  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://github.com/vertingo/vertingo-website-chatbot-app/blob/master/Images/Azure-Bot.gif" width="800" height="450"/></a>
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/vertingo-website-chatbot-app/master/Images/Azure-Bot.gif" width="800" height="450"/></a>
 </p> 
 
 Ensuite, téléchargez le profil de déploiement depuis Azure. Dans Visual Studio Code:
@@ -234,7 +234,7 @@ Ensuite, téléchargez le profil de déploiement depuis Azure. Dans Visual Studi
 Alternativement, vous pouvez télécharger le projet depuis le portail Azure et l'ouvrir avec Visual Studio Code 2017 (étape recommandée et déjà expliquée plus haut!).
 
 <p align="center">
-  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/vertingo-website-chatbot-app/blob/master/Images/chat-bot.png" width="900" height="250"/></a>
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/vertingo-website-chatbot-app/master/Images/chat-bot.png" width="900" height="250"/></a>
 </p> 
 
 Dans un premier temps, vous devez mettre à jour les variables `botFilePath` et `botFileSecret` dans le fichier `appsettings.json`. Vous pouvez récupérer ces valeurs depuis le portail Azure, sous Paramètres.
@@ -254,7 +254,7 @@ Vous pouvez également tester votre bot en local en utilisant le Bot Framework E
 3. Ouvrez le fichier `.bot` dans le Bot Framework Emulator pour tester votre bot.
 
 <p align="center">
-  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/vertingo-website-chatbot-app/blob/master/Images/Azure-Bot5.gif" width="800" height="450"/></a>
+  <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/vertingo-website-chatbot-app/master/Images/Azure-Bot5.gif" width="800" height="450"/></a>
 </p> 
 
 <p align="center">
