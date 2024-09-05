@@ -128,9 +128,12 @@ case TurnOffIntent:
 ```
 
 4. Ensuite exécuter le bot en local et dans l'émulateur de bot ouvrer le fichier .bot et si demandé entrer la valeur du botFileSecret.
+
 Pour le bot entrer la valeur suivante:
 
+```
 Turn on the livingroom lights to 50%
+```
 
 Le bot devrait vous retourner les valeurs suivantes:
 
@@ -171,22 +174,23 @@ Ci-dessous vous trouverez des illustrations et détails supplémentaires!
 
 ```
 npm i -g msbot luis-apis ludown (Installation du Gestionnaire Ludown, MSBOT, luis-apis CLI Tools)
-
+```
+```
 ludown parse toluis --in dialogs/greeting/resources/main.lu -o cognitiveModels/ --out basicBot.luis -n 'basic-bot-LUIS' -d 'Basic bot Bot Builder V4 sample.' --verbose (Génére le model basicBot.luis)
-
+```
+```
 luis import application --in cognitiveModels/basicBot.luis --appName BasicBot
-
-msbot list --secret [val_botFileSecret] (Récuperer botFileSecret dans appsettings.json ou si non renseigné dans appsettings.json aller sur le portail Azure, et dans le projet correspondant à votre 
-Chat-Bot et Paramètres d'App Service -> paramètres d'application!)
-
+```
+```
+msbot list --secret [val_botFileSecret] (Récuperer botFileSecret dans appsettings.json ou si non renseigné dans appsettings.json aller sur le portail Azure, et dans le projet correspondant à votre Chat-Bot et Paramètres d'App Service -> paramètres d'application!)
+```
+```
 luis train version --appId [val_app_id] --versionId [val_version] [--wait] (Récupérer [val_app_id] et [val_version] sur le portail LUIS(http://luis.ai/))
 ```
-
 <p align="center">
             <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/youtube2.png" width="400" height="150"/></a>
             <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="150"/></a>
 </p>
-
 
 ## Créer un Bot avec le Bot Builder SDK de Visual Studio Code 2017 en Javascript et .NET et déployer sur Azure(https://portal.azure.com)
 
