@@ -86,9 +86,9 @@ Une fois votre Web App Bot créé, suivez les étapes ci-dessous pour configurer
 
 1. Accédez à **Paramètres d'application** dans le portail Azure.
 2. Dans les **Paramètres de l'application**, renseignez les informations suivantes (obtenues lors de la publication de la base de connaissances QnA) :
-   - **QnAAuthKey** : Clé d'authentification pour interagir avec QnA Maker.
-   - **QnAEndpointHostName** : Nom d'hôte pour l'API QnA.
-   - **QnAKnowledgebaseId** : Identifiant de la base de connaissances QnA.
+   - **QnAAuthKey**: Clé d'authentification pour interagir avec QnA Maker.
+   - **QnAEndpointHostName**: Nom d'hôte pour l'API QnA.
+   - **QnAKnowledgebaseId**: Identifiant de la base de connaissances QnA.
 
 #### [Étape spécifique pour Web App Bot de type Basic Bot avec LUIS]
 
@@ -127,7 +127,7 @@ case TurnOffIntent:
     break;
 ```
 
-4. Ensuite éxecuter le bot en local et dans l'émulateur de bot ouvrer le fichier .bot et si demandé entrer la valeur du botFileSecret
+4. Ensuite exécuter le bot en local et dans l'émulateur de bot ouvrer le fichier .bot et si demandé entrer la valeur du botFileSecret.
 Pour le bot entrer la valeur suivante:
 
 Turn on the livingroom lights to 50%
