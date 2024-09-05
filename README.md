@@ -217,9 +217,9 @@ Une fois installé il suffit simplement d'ouvrir le fichier .bot avec l'applicat
 
 #### Créer un Chat Bot depuis Visual Studio 2017 en version en .NET
 
-Installer II Express(Internet Information Express) (https://www.microsoft.com/fr-fr/download/details.aspx?id=48264)
-Aller dans Visual Studio Code et rechercher dans l'onglet en ligne Enterprise Template Bot, installer ce dernier!
-Créer ensuite un projet Enterprise Template Bot.
+1. Installez II Express (Internet Information Services Express) depuis le lien suivant: [Télécharger II Express](https://www.microsoft.com/fr-fr/download/details.aspx?id=48264).
+2. Ouvrez Visual Studio Code et recherchez dans l'onglet en ligne le modèle `Enterprise Template Bot`. Installez ce modèle.
+3. Créez ensuite un projet à partir du modèle `Enterprise Template Bot`.
 
 #### Bot Channel Enregistrement
 Enregistrer votre Chat Bot dans la Bot Channel Registration pour récupérer les identifiants qu'il faudra remplacer dans Web.config dans le projet en .NET!
@@ -228,18 +228,32 @@ Enregistrer votre Chat Bot dans la Bot Channel Registration pour récupérer les
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot.gif" width="800" height="450"/></a>
 </p> 
 
-Ensuite télécharger le profil de déploiement depuis azure et dans Visual Studio Code en faisant clique droit sur le projet -> publier et importer le fichier profil dans le menu de publication!
-Ou Télécharger le projet depuis le portail Azure et ouvrer le avec Visual Studio Code 2017(Etape recommandé et déjà expliqué plus haut!)
+Ensuite, téléchargez le profil de déploiement depuis Azure. Dans Visual Studio Code :
+
+1. Faites un clic droit sur le projet et sélectionnez `Publier`.
+2. Importez le fichier de profil dans le menu de publication.
+
+Alternativement, vous pouvez télécharger le projet depuis le portail Azure et l'ouvrir avec Visual Studio Code 2017 (étape recommandée et déjà expliquée plus haut!).
 
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/chat-bot.png" width="900" height="250"/></a>
 </p> 
 
-Dans un premier temps il faut renseigner les variables botFilePath et botFileSecret dans appsettings.json en les récupérant depuis le portail Azure dans Paramètres ensuite pour déployer il 
-suffit simplement d'aller copier le mot de passe dans le fichier PublishSettings qui se trouve dans le dossier PostDeployScripts et ensuite clique droit sur le projet --> Publier
-Cliquer sur Publier et on vous demande de taper le mot de passe! Coller le mot passe copier précédement et votre chat-bot sera publié ou plutôt mettra à  jour la version précédente sur Azure!
-Vous pouvez également tester votre chat-bot en local avec Bot FrameWork Emulator. Pour cela installer l'émulateur depuis le lien suivant: https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1 
-et dans Visual Studio Code exécuter le chat-bot pour qu'il puisse être accessible depuis le localhost et ouvrer le fichier .bot!
+Dans un premier temps, vous devez mettre à jour les variables `botFilePath` et `botFileSecret` dans le fichier `appsettings.json`. Vous pouvez récupérer ces valeurs depuis le portail Azure, sous Paramètres.
+Pour déployer le bot:
+
+1. Ouvrez le fichier `.PublishSettings` situé dans le dossier `PostDeployScripts`.
+2. Copiez le mot de passe depuis le fichier `.PublishSettings`.
+3. Faites un clic droit sur le projet dans Visual Studio et sélectionnez `Publier`.
+4. Dans la boîte de dialogue de publication, collez le mot de passe copié lorsqu'il est demandé.
+
+Cette procédure publiera votre bot ou mettra à jour la version existante sur Azure.
+
+Vous pouvez également tester votre bot en local en utilisant le Bot Framework Emulator. Pour ce faire :
+
+1. Installez le Bot Framework Emulator depuis le lien suivant : [Bot Framework Emulator v4.2.1](https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1).
+2. Exécutez le bot dans Visual Studio Code pour le rendre accessible via localhost.
+3. Ouvrez le fichier `.bot` dans le Bot Framework Emulator pour tester votre bot.
 
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot5.gif" width="800" height="450"/></a>
@@ -250,19 +264,19 @@ et dans Visual Studio Code exécuter le chat-bot pour qu'il puisse être accessi
             <a href="https://www.facebook.com/vertingo/"><img src="https://platform-media.herokuapp.com/assets/images/reseaux-sociaux/rejoins_nous.png" width="400" height="150"/></a>
 </p>
 
-## Create Basic Bot template with LUIS(English version)
-This bot has been created using [Microsoft Bot Framework](https://dev.botframework.com),
-- Use [LUIS](https://luis.ai) to implement core AI capabilities
-- Implement a multi-turn conversation using Dialogs
-- Handle user interruptions for such things as Help or Cancel
-- Prompt for and validate requests for information from the user
+## Create Basic Bot Template with LUIS (English Version)
+This bot has been created using the [Microsoft Bot Framework](https://dev.botframework.com):
+- Uses [LUIS](https://luis.ai) to implement core AI capabilities
+- Implements multi-turn conversations using Dialogs
+- Handles user interruptions such as Help or Cancel
+- Prompts for and validates user information requests
 
-#### Prerequisite to run this bot locally
-- Download the bot code from the Build blade in the Azure Portal
-- Update the `appsettings.json` file in the root of the bot project with the botFilePath and botFileSecret 
-- You can find the botFilePath and botFileSecret in the Azure App Service application settings.
+#### Prerequisites to Run This Bot Locally
+- Download the bot code from the Build blade in the Azure Portal.
+- Update the `appsettings.json` file in the root of the bot project with `botFilePath` and `botFileSecret`.
+- You can find the `botFilePath` and `botFileSecret` in the Azure App Service application settings.
 
-Your appsettings.json file should look like this
+Your appsettings.json file should look like this:
 ```bash
 {
     "botFilePath": "<copy value from App settings>",
@@ -271,38 +285,48 @@ Your appsettings.json file should look like this
 ```
 
 #### Run in Visual Studio
-- Open the .sln file with Visual Studio.
-- Press F5.
+
+- Open the `.sln` file with Visual Studio.
+- Press `F5`.
+
 #### Run in Visual Studio Code
+
 - Open the bot project folder with Visual Studio Code.
-- Bring up a terminal.
-- Type 'dotnet run'.
-#### Testing the bot using Bot Framework Emulator
-[Microsoft Bot Framework Emulator](https://aka.ms/botframework-emulator) is a desktop application that allows bot developers to test and debug
-their bots on localhost or running remotely through a tunnel.
+- Open a terminal.
+- Type `dotnet run`.
+
+#### Test the Bot using Bot Framework Emulator
+
+The [Microsoft Bot Framework Emulator](https://aka.ms/botframework-emulator) is a desktop application that allows bot developers to test and debug their bots locally or remotely through a tunnel.
+
 - Install the Bot Framework Emulator from [here](https://aka.ms/botframework-emulator).
-#### Connect to bot using Bot Framework Emulator
-- Launch the Bot Framework Emulator
-- File -> Open bot and navigate to the bot project folder
-- Select `<your-bot-name>.bot` file
 
-## Deploy this bot to Azure
+#### Connect to the Bot using Bot Framework Emulator
+
+- Launch the Bot Framework Emulator.
+- Go to `File` -> `Open bot` and navigate to the bot project folder.
+- Select the `<your-bot-name>.bot` file.
+
+## Deploy This Bot to Azure
+
 #### Publish from Visual Studio
-- Open the .PublishSettings file you find in the PostDeployScripts folder
-- Copy the userPWD value
-- Right click on the Project and click on "Publish..."
-- Paste the password you just copied and publish
 
-#### Publish using the CLI tools
-You can use the [MSBot](https://github.com/microsoft/botbuilder-tools) Bot Builder CLI tool to clone and configure any services this sample depends on. 
-To install all Bot Builder tools - 
+- Open the `.PublishSettings` file located in the `PostDeployScripts` folder.
+- Copy the `userPWD` value.
+- Right-click on the project and click on `Publish...`.
+- Paste the password you just copied and publish.
 
-Ensure you have [Node.js](https://nodejs.org/) version 8.5 or higher
+#### Publish Using the CLI Tools
+
+You can use the [MSBot](https://github.com/microsoft/botbuilder-tools) Bot Builder CLI tool to clone and configure any services this sample depends on.
+
+To install all Bot Builder tools:
+- Ensure you have [Node.js](https://nodejs.org/) version 8.5 or higher.
 
 ```bash
 npm i -g msbot chatdown ludown qnamaker luis-apis botdispatch luisgen
 ```
-To clone this bot, run
+To clone this bot, run:
 ```
 msbot clone services -f deploymentScripts/msbotClone -n <BOT-NAME> -l <Azure-location> --subscriptionId <Azure-subscription-id>
 ```
