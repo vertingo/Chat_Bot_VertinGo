@@ -80,7 +80,6 @@ Une fois le Bot déployé, vous pouvez le tester directement depuis Azure ou via
 <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot2.gif" width="800" height="450"/></a>
 </p>
 
-
 #### [Étape spécifique pour Web App Bot de type QnA]
 Une fois votre Web App Bot créé, suivez les étapes ci-dessous pour configurer les paramètres liés à votre base de connaissances QnA Maker :
 
@@ -223,12 +222,11 @@ Une fois installé il suffit simplement d'ouvrir le fichier .bot avec l'applicat
 
 #### Bot Channel Enregistrement
 Enregistrer votre Chat Bot dans la Bot Channel Registration pour récupérer les identifiants qu'il faudra remplacer dans Web.config dans le projet en .NET!
-
 <p align="center">
   <a href="https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1"><img src="https://raw.githubusercontent.com/vertingo/Chat_Bot_VertinGo/master/Images/Azure-Bot.gif" width="800" height="450"/></a>
 </p> 
 
-Ensuite, téléchargez le profil de déploiement depuis Azure. Dans Visual Studio Code :
+Ensuite, téléchargez le profil de déploiement depuis Azure. Dans Visual Studio Code:
 
 1. Faites un clic droit sur le projet et sélectionnez `Publier`.
 2. Importez le fichier de profil dans le menu de publication.
@@ -249,7 +247,7 @@ Pour déployer le bot:
 
 Cette procédure publiera votre bot ou mettra à jour la version existante sur Azure.
 
-Vous pouvez également tester votre bot en local en utilisant le Bot Framework Emulator. Pour ce faire :
+Vous pouvez également tester votre bot en local en utilisant le Bot Framework Emulator. Pour ce faire:
 
 1. Installez le Bot Framework Emulator depuis le lien suivant : [Bot Framework Emulator v4.2.1](https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.2.1).
 2. Exécutez le bot dans Visual Studio Code pour le rendre accessible via localhost.
