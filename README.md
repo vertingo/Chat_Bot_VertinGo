@@ -1,65 +1,90 @@
 
 ![Image](https://raw.githubusercontent.com/vertingo/Easy_Admin_YouTube_Newsletter_Firebase/master/web/assets/images/github/vertin_go_website.jpg)
+
 ### Apporter votre soutien au projet :heart: pour de futures évolutions!
-[![GitHub stars](https://img.shields.io/github/stars/vertingo/screenshott.svg?style=social&label=Star)](https://github.com/vertingo/Chat_Bot_VertinGo) [![GitHub forks](https://img.shields.io/github/forks/vertingo/screenshott.svg?style=social&label=Fork)](https://github.com/vertingo/Chat_Bot_VertinGo/fork) [![GitHub watchers](https://img.shields.io/github/watchers/vertingo/screenshott.svg?style=social&label=Watch)](https://github.com/vertingo/Chat_Bot_VertinGo) [![GitHub followers](https://img.shields.io/github/followers/vertingo.svg?style=social&label=Follow)](https://github.com/vertingo)
-[![Twitter Follow](https://img.shields.io/twitter/follow/Vertin_Go.svg?style=social)](https://twitter.com/Vertin_Go)
-[![Facebook](https://img.shields.io/badge/Facebook-vertingo-blue?style=social&logo=facebook)](https://www.facebook.com/vertingo)
+
+[![GitHub stars](https://img.shields.io/github/stars/vertingo/screenshott.svg?style=social&label=Star)](https://github.com/vertingo/Chat_Bot_VertinGo) 
+[![GitHub forks](https://img.shields.io/github/forks/vertingo/screenshott.svg?style=social&label=Fork)](https://github.com/vertingo/Chat_Bot_VertinGo/fork) 
+[![GitHub watchers](https://img.shields.io/github/watchers/vertingo/screenshott.svg?style=social&label=Watch)](https://github.com/vertingo/Chat_Bot_VertinGo) 
+[![GitHub followers](https://img.shields.io/github/followers/vertingo.svg?style=social&label=Follow)](https://github.com/vertingo)  
+[![Twitter Follow](https://img.shields.io/twitter/follow/Vertin_Go.svg?style=social)](https://twitter.com/Vertin_Go)  
+[![Facebook](https://img.shields.io/badge/Facebook-vertingo-blue?style=social&logo=facebook)](https://www.facebook.com/vertingo)  
 [![YouTube Subscribe](https://img.shields.io/youtube/channel/subscribers/UC2g_-ipVjit6ZlACPWG4JvA?style=social)](https://www.youtube.com/channel/UC2g_-ipVjit6ZlACPWG4JvA?sub_confirmation=1)
 
+---
+
 # 🌐 Projet Chatbot App
-![App Progress Status](https://img.shields.io/badge/Status-Finished-0520b7.svg?style=plastic)
+
+![App Progress Status](https://img.shields.io/badge/Status-Finished-0520b7.svg?style=plastic)  
 [![Download](https://img.shields.io/badge/Download-Repo-brightgreen)](https://github.com/vertingo/vertingo-website-chatbot-app/archive/refs/heads/main.zip)
 
 <!-- BEGIN LATEST DOWNLOAD BUTTON -->
 [![Download zip](https://custom-icon-badges.demolab.com/badge/-Download-blue?style=for-the-badge&logo=download&logoColor=white "Download zip")](https://github.com/vertingo/vertingo-website-chatbot-app/archive/1.0.2.zip)
 <!-- END LATEST DOWNLOAD BUTTON -->
 
+---
+
 ## Créer le Chat Bot sur Azure + Téléchargement du projet pour l'éditer depuis Visual Studio Code en local + Ajout des Services QnA et Luis(Version Française)
 
-Créer un compte sur Azure à l'adresse suivante: (https://azure.microsoft.com/fr-fr/free/search/?WT.srch=1&wt.mc_id=AID719808_SEM_V5APtzy9&dclid=CP_s1s6Pt98CFcsT0wodbjIFaA)
+Créer un compte sur Azure à l'adresse suivante: [Azure Free Account](https://azure.microsoft.com/fr-fr/free/search/?WT.srch=1&wt.mc_id=AID719808_SEM_V5APtzy9&dclid=CP_s1s6Pt98CFcsT0wodbjIFaA)
 
-Egalement le gestionnaire CLI: (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+Installer également Azure CLI: [Azure CLI Installation](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 
-Petite précision avant de créer l'application App Bot si vous souhaitez pour intégrer les services QnA sinon vous pouvez passer à la section suivante!
+---
 
-Aller sur https://www.qnamaker.ai/ (Connecter-vous avec vos identifiants Azure et cliquer sur créer une base de connaissance!) et suiver les différentes 
-étapes à commencer par créer une ressource de type QnA Maker!
+### Prérequis avant de créer l'application App Bot
 
-#### [Etape 1]
-Pour la ressource QnA Maker indiquer les valeurs suivantes:
-- Le nom du Service
-- L'abonnement Free Trial par défaut
-- L'emplacement sélectionner Ouest des États-Unis(Précisez avant le type de tarification sinon impossible de sélectionner une valeur pour la tarification)
-- Le type de tarification (F0 gratuit)
-- Resource groupe (Laisser par défaut)
-- Recherche prix tiers(F (3 indexes))
+Si vous souhaitez intégrer les services QnA, suivez ces étapes. Si non, passez à la section suivante!
 
-Le reste peut rester par défaut et vous pouvez créer la ressource QnA Maker!
+Rendez-vous sur [QnA Maker](https://www.qnamaker.ai/), connectez-vous avec vos identifiants Azure et suivez les étapes pour créer une base de connaissance.
 
-#### [Etape 2]
-Une fois que vous avez créer la ressource QnA Maker renseigner les 3 valeurs suivantes:
-- Microsoft Azure Directory ID(Sélectionner dans la liste!)
-- Azure subscription name(Sélectionner dans la liste!)
-- Azure QnA service(Sélectionner dans la liste!)
+---
 
-#### [Etape 3]
-Donner un nom à votre base de connaissance!
+#### [Étape 1] Créer une ressource QnA Maker
 
-#### [Etape 4]
-Ajouter des valeurs à votre base de connaissance en ajoutant par exemple un url redirigeant vers un Faq(Frenquency ask question) d'un site!
-Exemple: https://docs.microsoft.com/fr-fr/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq
+- Nom du service : Choisissez un nom pour votre service
+- Abonnement : Sélectionnez **Free Trial**
+- Emplacement : Ouest des États-Unis (important de préciser avant le type de tarification)
+- Type de tarification : Sélectionnez **F0** pour un service gratuit
+- Resource Group : Laissez par défaut
+- Recherche tiers : Sélectionnez F (3 indexes)
 
-Sinon ajouter un fichier de Questions Réponses!
+---
 
-#### [Etape 5]
-Cliquer sur Create your KB
+#### [Étape 2] Configurer QnA Maker
 
-Une fois créé cliquer sur: 
-+ Add QnA pair (Ajouter en question: Hi et en réponse: Hello. Ask me bitlocker questions)
-Ensuite cliquer sur Save And Train! Vous pouvez tester votre bot en tapant hi dans test!
-Refermer l'onglet test en cliquant sur test puis publier votre base de connaissance!
+Renseignez les informations suivantes pour la configuration :
 
-Vous obtenez les informations suivantes:
+- **Microsoft Azure Directory ID** : Sélectionnez dans la liste
+- **Azure Subscription Name** : Sélectionnez dans la liste
+- **Azure QnA Service** : Sélectionnez dans la liste
+
+---
+
+#### [Étape 3] Créer la base de connaissance
+
+- Donnez un nom à votre base de connaissance.
+
+---
+
+#### [Étape 4] Ajouter du contenu à la base de connaissance
+
+Ajoutez du contenu à votre base de connaissance, soit en utilisant une URL d'une FAQ ou en important un fichier de Questions-Réponses.
+
+Exemple d'URL pour une FAQ :  
+[FAQ BitLocker](https://docs.microsoft.com/fr-fr/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
+
+---
+
+#### [Étape 5] Finaliser la base de connaissance
+
+- Cliquez sur **Create your KB**
+- Ajoutez des paires de Questions-Réponses (ex : "Question : Hi", "Réponse : Hello. Ask me BitLocker questions").
+- Sauvegardez et entraînez votre bot en cliquant sur **Save And Train**.
+- Testez votre bot dans la section test.
+- Enfin, publiez votre base de connaissance.
+
+Après publication, vous obtiendrez les informations suivantes :
 ```
 POST /knowledgebases/<QnAKnowledgebaseId>/generateAnswer
 Host:  <QnAEndpointHostName>
