@@ -81,36 +81,44 @@ Une fois le Bot déployé, vous pouvez le tester directement depuis Azure ou via
 </p>
 
 
-#### [Etape spécifique pour Web App Bot de type QnA]
-Une fois l'application Web App Bot créé rendez-vous dans Paramètres d'application et dans Paramètres de l'application renseigner les valeurs suivantes
-récupérer depuis l'étape de publication de notre base de connaissance:
-- QnAAuthKey
-- QnAEndpointHostName
-- QnAKnowledgebaseId
+#### [Étape spécifique pour Web App Bot de type QnA]
+Une fois votre Web App Bot créé, suivez les étapes ci-dessous pour configurer les paramètres liés à votre base de connaissances QnA Maker :
 
-#### [Etape spécifique pour Web App Bot de type Basic Bot Luis]
-- Aller sur le portail LUIS à l'adresse suivante: https://www.luis.ai 
-- Connectez-vous avec vos identifiants Azure et aller dans l'onglet My Apps!
-- Cliquer sur l'application créer précèdement et tout en bas à gauche Prebuilt Domains!
-- Sélectionner le domaine de votre choix(Pour rester cohérant avec la suite choissisez HomeAutomation) et puis train et pour finir publier!
-- Retourner dans Azure et sélectionner votre ressource Web App Bot aller dans le menu Build!
-- Cliquer sur télécharger un fichier zip(Attendez un peu le temps que votre fichier soit prêt à télécharger!)
-- Si vous n'avez pas Visual Studio 2017 télécharger le afin de pouvoir ouvrir le projet de votre Web App Bot
-- Ensuite créer un nouveau dossier avec le nom de votre bot à l'emplacement suivant C:\Users\<users>\source\repos 
-- Placer le contenu de votre fichier zip dans ce dernier dossier et faites clique droit extraire ici!
-- Ensuite ouvrer Visual Studio 2017 et aller dans votre dossier créé et sélectionner le fichier à l'extension .sln
-- Dans le appsettings.json renseigner les valeurs suivantes: botFilePath, botFileSecret que vous pouvez récupérer 
-dans Paramètres d'application sur le portail Azure de votre Web App Bot!
-- Ouvrer le fichier BasicBot.cs et dans [Supported LUIS Intents] rajouter les deux lignes suivantes:
+1. Accédez à **Paramètres d'application** dans le portail Azure.
+2. Dans les **Paramètres de l'application**, renseignez les informations suivantes (obtenues lors de la publication de la base de connaissances QnA) :
+   - **QnAAuthKey** : Clé d'authentification pour interagir avec QnA Maker.
+   - **QnAEndpointHostName** : Nom d'hôte pour l'API QnA.
+   - **QnAKnowledgebaseId** : Identifiant de la base de connaissances QnA.
 
-```
+#### [Étape spécifique pour Web App Bot de type Basic Bot avec LUIS]
+
+1. Accédez au portail [LUIS](https://www.luis.ai) et connectez-vous avec vos identifiants Azure.
+2. Allez dans l'onglet **My Apps**, puis sélectionnez l'application que vous avez créée précédemment.
+3. En bas à gauche, cliquez sur **Prebuilt Domains** et choisissez un domaine, par exemple, **HomeAutomation**.
+4. Après avoir sélectionné, cliquez sur **Train**, puis sur **Publish**.
+5. Retournez sur Azure, sélectionnez votre Web App Bot, puis dans le menu, cliquez sur **Build**.
+6. Téléchargez le fichier zip contenant le projet de votre Web App Bot.
+7. Si Visual Studio 2017 n'est pas installé, téléchargez-le pour pouvoir ouvrir le projet.
+8. Créez un dossier avec le nom de votre bot à l'emplacement suivant : `C:\Users\<users>\source\repos`.
+9. Extrayez le contenu du fichier zip dans ce dossier.
+10. Ouvrez Visual Studio 2017, accédez au dossier, et sélectionnez le fichier avec l'extension `.sln`.
+
+#### Configuration des paramètres dans `appsettings.json`
+Dans le fichier `appsettings.json`, renseignez les valeurs suivantes (disponibles dans les Paramètres d'application d'Azure pour votre Web App Bot) :
+   - **botFilePath**
+   - **botFileSecret**
+
+#### Modification de `BasicBot.cs`
+1. Ouvrez le fichier `BasicBot.cs`.
+2. Dans la section `[Supported LUIS Intents]`, ajoutez les lignes suivantes pour prendre en charge de nouveaux intents:
+```csharp
 public const string TurnOnIntent = "HomeAutomation_TurnOn"; // new intent
 public const string TurnOffIntent = "HomeAutomation_TurnOff"; // new intent
 ```
 
-Et ensuite dans la méthode OnTurnAsync au niveau du deuxième switch imbriqué rajouter les valeurs suivantes:
+3. Et ensuite dans la méthode OnTurnAsync au niveau du deuxième switch imbriqué rajouter les valeurs suivantes:
 
-```
+```csharp
 case TurnOnIntent:
     await turnContext.SendActivityAsync("TurnOn intent found, JSON response: " + luisResults?.Entities.ToString());
     break;
@@ -119,7 +127,7 @@ case TurnOffIntent:
     break;
 ```
 
-Ensuite éxecuter le bot en local et dans l'émulateur de bot ouvrer le fichier .bot et si demandé entrer la valeur du botFileSecret
+4. Ensuite éxecuter le bot en local et dans l'émulateur de bot ouvrer le fichier .bot et si demandé entrer la valeur du botFileSecret
 Pour le bot entrer la valeur suivante:
 
 Turn on the livingroom lights to 50%
